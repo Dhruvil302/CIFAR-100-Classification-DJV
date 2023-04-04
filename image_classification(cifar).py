@@ -7,22 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1z5Phr6fpcWfN1J5ejx_6lqfU4kX3C22k
 """
 
-import tarfile
-tar = tarfile.open("/content/drive/MyDrive/cifar-100-python.tar.gz","r:gz")
-
-tar.extractall("/content/drive/MyDrive/cifar")
-tar.close()
-
-def unpickle(file):
-    import pickle
-    with open(file, 'rb') as fo:
-        dict = pickle.load(fo, encoding='bytes')
-    return dict
-train=unpickle("/content/drive/MyDrive/cifar/cifar-100-python/train")
-
-test=unpickle("/content/drive/MyDrive/cifar/cifar-100-python/test")
-
-
 
 from keras.datasets import cifar100
 
